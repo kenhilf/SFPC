@@ -12,6 +12,9 @@ bld/
 [Bb]in/
 [Oo]bj/
 *.lib
+*.exe
+*.ilk
+*.pdb
 
 # Visual C++ cache files
 ipch/
