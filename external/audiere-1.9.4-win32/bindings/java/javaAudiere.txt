@@ -1,0 +1,7 @@
+Java bindings...  Same as all of the other bindings...  Syntax:
+
+org.aegisknight.audiere.Context context =
+  new org.aegisknight.audiere.Context();
+org.aegisknight.audiere.Stream stream =
+  context.openStream("blah.mp3");
+stream.play();

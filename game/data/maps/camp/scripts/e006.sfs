@@ -1,0 +1,5 @@
+!SFPC_Script "Warp - Woods Battle"
+
+#Warp 52 49 "woods" "Down"
+#Warp 52 49 "pathtest" "Down"
+Warp 19 9 "astartest" "Down"

@@ -1,0 +1,5 @@
+!SFPC_Script "Kitchen Shelves"
+
+CheckDirection "Up"
+	DialogueWindow "BOWIE investigated the shelves.^Utensils, bowls, and other kitchen tools line the shelves."
+End

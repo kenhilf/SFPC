@@ -1,0 +1,7 @@
+!SFPC_Script "Warp Test"
+
+Warp 50 70 "castle" "Up" 
+
+#FadeOut
+#FadeIn
+

@@ -1,0 +1,6 @@
+!SFPC_Script "SetFlag testing"
+
+#testing flags
+
+SetFlag "showtext"
+

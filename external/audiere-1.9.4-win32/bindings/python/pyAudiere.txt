@@ -1,0 +1,81 @@
+Audiere Bindings for Python
+Chad Austin
+2002.09.05
+
+
+How do I install it?
+--
+
+Into the Windows distribution of Python 2.2:
+  Copy audiere.dll and audiere.pyd into your Python22 directory (or
+  perhaps Python22/DLLs, depending on your system).
+
+
+How do I use it?
+--
+
+import audiere                            # brings in the Audiere module
+print audiere.get_version()               # print the version information
+device = audiere.open_device()            # open the default AudioDevice
+song = device.open_sound("song.ogg", 1)   # opens a song in streaming mode
+song.playing = 1                          # begins playback
+
+
+Cool!  What else can I do?
+--
+
+The audiere module only has two functions:
+
+  get_version()
+    - Returns the Audiere version string.
+
+  open_device([name [, parameters]])
+    - Opens an AudioDevice object specified by 'name'.  If name is not
+      specified, it opens the default device.  See the Audiere
+      documentation for which devices are available.
+
+
+AudioDevice methods:
+
+  create_tone(frequency)
+    - Creates a tone with the specified frequency and returns an
+      OutputStream object that represents it.
+
+  open_sound(filename [, streaming])
+    - Opens a sound from the filename, and returns an OutputStream
+      object for it.  The streaming parameter is a boolean.  It
+      defaults to false.
+
+
+OutputStream methods and fields:
+
+  field: playing :: boolean
+    - If true, this stream is playing.  If false, this stream is not
+      playing.  Remember, 1 is true and 0 is false.
+
+  method: reset()
+    - Resets the stream to the beginning.
+
+  field: repeating :: boolean
+    - If true, when the end of the stream is hit, the stream starts
+      playback from the beginning.
+
+  field: volume :: floating point number
+    - The current volume of the stream.  1 is maximum, 0 is silence.
+
+  field: pan :: floating point number
+    - The current panning level of the stream.  0 is centered, -1 is
+      all of the way to the left, and 1 is to the right.
+
+  field: pitchshift :: floating point number
+    - The current pitch shift.  1 is no shift, 2 is an octave higher,
+      and 0.5 is an octave lower.
+
+  readonly field: seekable :: boolean
+    - If this is true, the following fields are applicable.
+
+  readonly field: length :: integer
+    - The number of samples within this stream.
+
+  field: position :: integer
+    - The current position of the play cursor within the stream.

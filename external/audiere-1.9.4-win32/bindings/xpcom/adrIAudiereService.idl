@@ -1,0 +1,9 @@
+#include "nsISupports.idl"
+#include "adrIAudioDevice.idl"
+
+
+[scriptable, uuid(6e6b6697-8a6b-49ed-bff0-b560dbad8bb6)]
+interface adrIAudiereService : nsISupports {
+  string getVersion();
+  adrIAudioDevice openDevice(in string name, in string parameters);
+};

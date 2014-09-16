@@ -1,0 +1,27 @@
+!SFPC_Script "camp startup script"
+
+FlagNeeded "IntroDone"
+	PlayMusic "tension.mp3"
+End
+
+FlagNeeded "Camp_Chest1"
+	SetOverlayTile 27 57 30
+End
+
+SetCommandMode "ActorSetup"
+
+#BeginNewActor "NPCChester" "NPC"
+
+#	SetActorClass "NONE"
+#	SetActorMobility "Human"
+#	SetActorStats 1 1 0 0 1 1 1 5
+#	SetActorTileset "sfcentaur.bmp"
+#	SetActorFaceset "face_chester.bmp"
+#	SetActorPosition 52 47
+#	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+#EndNewActor
+
+ResetCommandMode

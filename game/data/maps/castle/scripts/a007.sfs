@@ -1,0 +1,3 @@
+!SFPC_Script "BedroomGuard"
+
+DialogueWindow "You may not enter the king's chamber."

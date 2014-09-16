@@ -1,0 +1,17 @@
+- TileMap Gets/Sets need to handle out of range requests better
+- fix missing bloop-bloop noise for movement in combat
+- replace "ticks" with timeMS throughout the code where appropriate (not HighResTimer)
+- Don't allow 4DirMenu to open if character is in motion?
+- Get StartBattle and EndBattle solely in GroundBattle
+- investigate Named Parameters for DrawMgr, Singleton as well?
+- GameInit script as well as GameStartup script for stuff like resolution?
+- factor out as much crap out of GameEngine private: as possible (m_pActor)
+- make enemies use targeting bracket
+- save maps need to use windows dialogbox
+- Update ActionMenu::Init to use slide rate of 1200
+- land effect in dmg formula
+- GLScissor bug when running game windowed but maximized!
+- dialoguewindow: animated paused blinker
+- CommandMgr::AddCommandFromToken() - is there a better way?  
+- letter fade in instead of draw one at a time like in P4?  (100/75/50/25/0)
+- deal with @HACK in WindowMgr::Update for modeless windows

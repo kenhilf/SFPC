@@ -1,0 +1,219 @@
+!SFPC_Script "castle startup script"
+
+PlayMusic "Malorie.mp3"
+
+FlagNeeded "Castle1_Chest1"
+	SetOverlayTile 27 44 49
+End
+
+FlagNeeded "Castle1_Chest2"
+	SetOverlayTile 27 45 49
+End
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "Chancelor" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "chancelor.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 50 39
+	SetActorFacing "Down"
+
+EndNewActor
+
+BeginNewActor "CastleCook" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "bluemaid.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 42 39
+	SetActorFacing "Up"
+
+EndNewActor
+
+BeginNewActor "Scholar" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "oldman.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 58 46
+	SetActorFacing "Down"
+
+EndNewActor
+
+BeginNewActor "Soldier1" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 53 44
+	SetActorFacing "Left"
+
+EndNewActor
+
+BeginNewActor "Jailor" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 62 20
+	SetActorFacing "Left"
+
+EndNewActor
+
+BeginNewActor "Soldier2" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 41 49
+	SetActorFacing "Down"
+
+EndNewActor
+
+BeginNewActor "Soldier3" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 49 48
+	SetActorFacing "Left"
+
+EndNewActor
+
+BeginNewActor "BedroomGuard" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 23 43
+	SetActorFacing "Right"
+
+EndNewActor
+
+BeginNewActor "King" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "king.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 25 42
+	SetActorFacing "Right"
+
+EndNewActor
+
+BeginNewActor "General1" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "knight.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 26 41
+	SetActorFacing "Down"
+
+EndNewActor
+
+BeginNewActor "General2" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "warrior.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 27 41
+	SetActorFacing "Down"
+
+EndNewActor
+
+BeginNewActor "Lookout1" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 23 36
+	SetActorFacing "Right"
+
+EndNewActor
+
+BeginNewActor "Lookout2" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 22 49
+	SetActorFacing "Right"
+
+EndNewActor
+
+BeginNewActor "Queen" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "princess.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 21 44
+	SetActorFacing "Left"
+
+EndNewActor
+
+BeginNewActor "Soldier4" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 51 60
+	SetActorFacing "Down"
+
+EndNewActor
+
+BeginNewActor "Fisherman" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "sailor.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 58 66
+	SetActorFacing "Down"
+
+EndNewActor
+
+BeginNewActor "Servant1" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "greenmaid.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 46 63
+	SetActorFacing "Down"
+
+EndNewActor
+
+ResetCommandMode

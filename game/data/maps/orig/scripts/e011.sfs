@@ -1,0 +1,7 @@
+!SFPC_Script "Warp Test"
+
+Warp 10 10 "sfmap" "Down" 
+
+#FadeOut
+#FadeIn
+

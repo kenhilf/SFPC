@@ -1,0 +1,14 @@
+!SFPC_Script "Chest 2 - Angel Wing"
+
+FlagNeeded "Castle1_Chest2"
+	DialogueWindow "BOWIE looked in the chest.^It was empty."
+End
+
+NoFlag "Castle1_Chest2"
+	SetOverlayTile 27 45 49
+	PlaySound "open-chest.ogg"
+	AddItem "Angel Wing" "opened the chest."
+	SetFlag "Castle1_Chest2"
+End
+
+

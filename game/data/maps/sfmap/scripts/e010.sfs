@@ -1,0 +1,6 @@
+!SFPC_Script "CheckDirection Test"
+
+CheckDirection "Up"
+	DialogueWindow "This is a different script."
+End
+

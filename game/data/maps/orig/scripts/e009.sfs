@@ -1,0 +1,10 @@
+!SFPC_Script "Barrel MedHerb 1"
+
+FlagNeeded "Town1Herb1"
+	DialogueWindow "BOWIE looked in the barrel.^It was empty."
+End
+
+NoFlag "Town1Herb1"
+	AddItem "Medical Herb" "looked in the barrel."
+	SetFlag "Town1Herb1"	
+End

@@ -1,0 +1,170 @@
+!SFPC_Script "Game Start" 
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "BOWIE" "Player"
+
+	SetActorClass "SDMN"
+	SetActorMobility "Human"
+	SetActorStats 1 12 8 0 6 4 4 6
+	SetActorTileset "sfsdmn.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_bowie.bmp" 5
+	SetActorPosition 52 49
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorSpell "Egress"
+	SetActorItemEquipped "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "CHESTER" "Player"
+
+	SetActorClass "KNTE"
+	SetActorMobility "Centaur"
+	SetActorStats 1 11 0 0 5 5 7 7
+	SetActorTileset "sfcentaur.bmp"
+	SetActorFaceset "face_chester.bmp"
+	SetActorBattleset "battle_chester.bmp" 5
+	SetActorPosition 0 1
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Bronze Lance"
+	SetActorItem "Wooden Rod"
+	SetActorItemEquipped "Short Spear"
+
+EndNewActor
+
+BeginNewActor "SARAH" "Player"
+
+	SetActorClass "PRST"
+	SetActorMobility "Elf"
+	SetActorStats 1 11 10 0 6 5 5 5
+	SetActorTileset "sfhealer.bmp"
+	SetActorFaceset "face_sarah.bmp"
+	SetActorBattleset "battle_sarah.bmp" 5
+	SetActorPosition 0 2
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorSpell "Heal"
+	SetActorItemEquipped "Wooden Rod"
+	SetActorItem "Indra Staff"
+
+EndNewActor
+
+BeginNewActor "LUKE" "Player"
+
+	SetActorClass "BDMN"
+	SetActorMobility "Hovering"
+	SetActorStats 1 12 0 0 5 6 7 6
+	SetActorTileset "sfbird.bmp"
+	SetActorFaceset "face_luke.bmp"
+	SetActorBattleset "battle_luke.bmp" 5
+	SetActorPosition 0 3
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "JAHA" "Player"
+
+	SetActorClass "WARR"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 9 0 0 9 7 4 5
+	SetActorTileset "sfdwarf.bmp"
+	SetActorFaceset "face_jaha.bmp"
+	SetActorBattleset "battle_jaha.bmp" 5
+	SetActorPosition 0 4
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Short Axe"
+
+EndNewActor
+
+BeginNewActor "KAZIN" "Player"
+
+	SetActorClass "MAGE"
+	SetActorMobility "Elf"
+	SetActorStats 1 10 7 0 4 4 6 5
+	SetActorTileset "sfelfmage.bmp"
+	SetActorFaceset "face_kazin.bmp"
+	SetActorBattleset "battle_kazin.bmp" 5
+	SetActorPosition 0 5
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorSpell "Blaze"
+	SetActorItemEquipped "Wooden Rod"
+
+EndNewActor
+
+BeginNewActor "SLADE" "Player"
+
+	SetActorClass "THIF"
+	SetActorMobility "Human"
+	SetActorStats 1 8 0 0 5 6 6 6
+	SetActorTileset "sfratthief.bmp"
+	SetActorFaceset "face_slade.bmp"
+	SetActorBattleset "battle_slade.bmp" 5
+	SetActorPosition 0 6
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Short Knife"
+	SetActorItem "Dagger"
+
+EndNewActor
+
+BeginNewActor "PETER" "Player"
+
+	SetActorClass "PHNK"
+	SetActorMobility "Flying"
+	SetActorStats 1 12 0 0 10 8 4 6
+	SetActorTileset "sfphnk.bmp"
+	SetActorFaceset "face_peter.bmp"
+	SetActorBattleset "battle_peter.bmp" 5
+	SetActorPosition 0 7
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "MAY" "Player"
+
+	SetActorClass "RNGR"
+	SetActorMobility "Centaur"
+	SetActorStats 1 9 0 0 8 4 5 5
+	SetActorTileset "sfbowcentaur.bmp"
+	SetActorFaceset "face_may.bmp"
+	SetActorBattleset "battle_may.bmp" 5
+	SetActorPosition 0 8
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Wooden Arrow"
+
+EndNewActor
+
+BeginNewActor "GERHALT" "Player"
+
+	SetActorClass "WFMN"
+	SetActorMobility "Elf"
+	SetActorStats 1 9 0 0 14 7 7 5
+	SetActorTileset "sfwolfman.bmp"
+	SetActorFaceset "face_gerhalt.bmp"
+	SetActorBattleset "battle_gerhalt.bmp" 5
+	SetActorPosition 0 9
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+ResetCommandMode

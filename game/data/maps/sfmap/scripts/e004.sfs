@@ -1,0 +1,4 @@
+!SFPC_Script "RemoveFlag testing"
+
+RemoveFlag "showtext"
+

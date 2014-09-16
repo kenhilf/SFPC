@@ -1,0 +1,6 @@
+!SFPC_Script "Treasure Chest 20 7 - Steel Sword"
+
+SetOverlayTile 27 20 7
+PlaySound "open-chest.ogg"
+AddItem "Steel Sword" "opened the chest."
+SetEvent 0 20 7

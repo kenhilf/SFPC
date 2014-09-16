@@ -1,0 +1,6 @@
+#file format not yet formalized, notes only!
+
+team: enemy
+front toe: 50, 126
+frames: idle1, idle2, evade, attack1, attack2
+file: 640x128

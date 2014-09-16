@@ -1,0 +1,1025 @@
+!SFPC_Script "Master Item List" 
+
+# Item Commands:
+
+# BeginNewItem "ItemName"
+# EndNewItem
+# SetItemClass "Class" [Weapon, Accessory, Tool, Promotion, Quest]
+# SetItemIcon "Proper SF2 Name" [Converts to GfxID enum]
+# SetCutsceneGfxFilename "filename.bmp"
+# SetItemStats 0 0 7 0 0 0 [int hp, int mp, int atk, int def, int agi, int mov]
+# SetItemGoldValue 1000
+# AddItemRange 1
+# AddItemEquipable "SDMN" [Converts to CharacterClass enum]
+
+
+SetCommandMode "ItemSetup"
+
+###########
+# Weapons #
+###########
+
+#################### Swords ####################
+
+BeginNewItem "Wooden Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Wooden Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 3 0 0 0
+	SetItemGoldValue 80
+	AddItemRange 1
+	AddItemEquipable "SDMN"
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDMN"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Short Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Short Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 5 0 0 0
+	SetItemGoldValue 120
+	AddItemRange 1
+	AddItemEquipable "SDMN"
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDMN"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Middle Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Middle Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 8 0 0 0
+	SetItemGoldValue 340
+	AddItemRange 1
+	AddItemEquipable "SDMN"
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDMN"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Long Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Long Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 12 0 0 0
+	SetItemGoldValue 620
+	AddItemRange 1
+	AddItemEquipable "SDMN"
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDMN"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Steel Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Steel Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 16 0 0 0
+	SetItemGoldValue 1120
+	AddItemRange 1
+	AddItemEquipable "SDMN"
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDMN"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Achilles Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Achilles Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 19 0 0 0
+	SetItemGoldValue 1250
+	AddItemRange 1
+	AddItemEquipable "SDMN"
+	AddItemEquipable "HERO"
+
+EndNewItem
+
+BeginNewItem "Broad Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Broad Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 22 0 0 0
+	SetItemGoldValue 1600
+	AddItemRange 1
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Buster Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Buster Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 26 0 0 0
+	SetItemGoldValue 2600
+	AddItemRange 1
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Great Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Great Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 29 0 0 0
+	SetItemGoldValue 5100
+	AddItemRange 1
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Critical Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Critical Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 32 0 0 0
+	SetItemGoldValue 7200
+	AddItemRange 1
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Battle Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Battle Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 35 0 0 0
+	SetItemGoldValue 9200
+	AddItemRange 1
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Counter Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Counter Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 39 0 0 0
+	SetItemGoldValue 13000
+	AddItemRange 1
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Levanter"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Levanter"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 42 0 0 0
+	SetItemGoldValue 15000
+	AddItemRange 1
+	AddItemEquipable "HERO"
+
+EndNewItem
+
+BeginNewItem "Force Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Force Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 46 0 0 0
+	SetItemGoldValue 10000
+	AddItemRange 1
+	AddItemEquipable "HERO"
+
+EndNewItem
+
+BeginNewItem "Dark Sword"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Dark Sword"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 50 0 0 0  # Def -5
+	SetItemGoldValue 17000
+	AddItemRange 1
+	AddItemEquipable "HERO"
+	AddItemEquipable "BDBT"
+	AddItemEquipable "NINJ"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+#################### Staffs ####################
+
+BeginNewItem "Wooden Rod"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Wooden Rod"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 3 0 0 0
+	SetItemGoldValue 60
+	AddItemRange 1
+	AddItemEquipable "MAGE"
+	AddItemEquipable "PRST"
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Short Rod"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Short Rod"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 5 0 0 0
+	SetItemGoldValue 130
+	AddItemRange 1
+	AddItemEquipable "MAGE"
+	AddItemEquipable "PRST"
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Bronze Rod"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Bronze Rod"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 8 0 0 0
+	SetItemGoldValue 360
+	AddItemRange 1
+	AddItemEquipable "MAGE"
+	AddItemEquipable "PRST"
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Iron Rod"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Iron Rod"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 12 0 0 0
+	SetItemGoldValue 560
+	AddItemRange 1
+	AddItemEquipable "MAGE"
+	AddItemEquipable "PRST"
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Power Stick"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Power Stick"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 15 0 0 0
+	SetItemGoldValue 1050
+	AddItemRange 1
+	AddItemEquipable "MAGE"
+	AddItemEquipable "PRST"
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Flail"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Flail"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 19 0 0 0
+	SetItemGoldValue 1490
+	AddItemRange 1
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Guardian Staff"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Guardian Staff"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 22 5 0 0
+	SetItemGoldValue 2380
+	AddItemRange 1
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Indra Staff"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Indra Staff"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 25 0 0 0
+	SetItemGoldValue 3200
+	AddItemRange 1
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Wish Staff"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Wish Staff"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 26 0 0 0
+	SetItemGoldValue 6100
+	AddItemRange 1
+	AddItemEquipable "VICR"
+
+EndNewItem
+
+BeginNewItem "Mage Staff"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Mage Staff"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 27 0 0 0
+	SetItemGoldValue 6300
+	AddItemRange 1
+	AddItemEquipable "SORC"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Great Rod"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Great Rod"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 28 0 0 0
+	SetItemGoldValue 7900
+	AddItemRange 1
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Holy Staff"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Holy Staff"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 29 0 0 0
+	SetItemGoldValue 9000
+	AddItemRange 1
+	AddItemEquipable "VICR"
+
+EndNewItem
+
+BeginNewItem "Goddess Staff"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Goddess Staff"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 31 0 0 0
+	SetItemGoldValue 9700
+	AddItemRange 1
+	AddItemEquipable "VICR"
+
+EndNewItem
+
+BeginNewItem "Supply Staff"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Supply Staff"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 32 0 0 0
+	SetItemGoldValue 8500
+	AddItemRange 1
+	AddItemEquipable "SORC"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Freeze Staff"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Freeze Staff"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 37 0 0 0
+	SetItemGoldValue 9500
+	AddItemRange 1
+	AddItemEquipable "SORC"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Mystery Staff"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Mystery Staff"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 39 0 0 0
+	SetItemGoldValue 10000
+	AddItemRange 1
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+BeginNewItem "Demon Rod"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Demon Rod"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 50 0 0 0  # Def -10
+	SetItemGoldValue 12500
+	AddItemRange 1
+	AddItemEquipable "SORC"
+	AddItemEquipable "VICR"
+	AddItemEquipable "WIZ"
+
+EndNewItem
+
+#################### Spears ####################
+
+BeginNewItem "Wooden Stick"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Wooden Stick"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 3 0 0 0
+	SetItemGoldValue 90
+	AddItemRange 1
+	AddItemEquipable "KNTE"
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Short Spear"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Short Spear"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 5 0 0 0
+	SetItemGoldValue 120
+	AddItemRange 1
+	AddItemRange 2
+	AddItemEquipable "KNTE"
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Bronze Lance"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Bronze Lance"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 8 0 0 0
+	SetItemGoldValue 260
+	AddItemRange 1
+	AddItemEquipable "KNTE"
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Spear"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Spear"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 12 0 0 0
+	SetItemGoldValue 460
+	AddItemRange 1
+	AddItemRange 2
+	AddItemEquipable "KNTE"
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Steel Lance"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Steel Lance"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 16 0 0 0
+	SetItemGoldValue 810
+	AddItemRange 1
+	AddItemEquipable "KNTE"
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Power Spear"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Power Spear"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 20 0 0 0
+	SetItemGoldValue 1270
+	AddItemRange 1
+	AddItemRange 2
+	AddItemEquipable "KNTE"
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Heavy Lance"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Heavy Lance"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 23 0 0 0
+	SetItemGoldValue 1600
+	AddItemRange 1
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Javelin"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Javelin"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 26 0 0 0
+	SetItemGoldValue 3400
+	AddItemRange 1
+	AddItemRange 2
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Chrome Lance"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Chrome Lance"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 31 0 0 0
+	SetItemGoldValue 6900
+	AddItemRange 1
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Valkyrie"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Valkyrie"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 33 0 0 0
+	SetItemGoldValue 7700
+	AddItemRange 1
+	AddItemRange 2
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Halberd"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Halberd"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 37 0 0 0
+	SetItemGoldValue 7300
+	AddItemRange 1
+	AddItemRange 2
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Holy Lance"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Holy Lance"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 39 5 0 0
+	SetItemGoldValue 9300
+	AddItemRange 1
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Mist Javelin"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Mist Javelin"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 43 0 0 0
+	SetItemGoldValue 9900
+	AddItemRange 1
+	AddItemRange 2
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+BeginNewItem "Evil Lance"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Holy Lance"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 48 0 0 0  # Mov -2
+	SetItemGoldValue 11000
+	AddItemRange 1
+	AddItemEquipable "PLDN"
+	AddItemEquipable "PGNT"
+
+EndNewItem
+
+##################### Axes #####################
+
+BeginNewItem "Short Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Short Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 5 0 0 0
+	SetItemGoldValue 120
+	AddItemRange 1
+	AddItemEquipable "WARR"
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Hand Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Hand Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 9 0 0 0
+	SetItemGoldValue 340
+	AddItemRange 1
+	AddItemEquipable "WARR"
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Middle Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Middle Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 13 0 0 0
+	SetItemGoldValue 610
+	AddItemRange 1
+	AddItemEquipable "WARR"
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Power Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Power Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 17 0 0 0
+	SetItemGoldValue 1100
+	AddItemRange 1
+	AddItemEquipable "WARR"
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Battle Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Battle Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 21 0 0 0
+	SetItemGoldValue 1370
+	AddItemRange 1
+	AddItemEquipable "WARR"
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Large Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Short Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 25 0 0 0
+	SetItemGoldValue 2250
+	AddItemRange 1
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Great Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Short Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 28 0 0 0
+	SetItemGoldValue 4600
+	AddItemRange 1
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Heat Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Heat Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 32 0 0 0
+	SetItemGoldValue 7200
+	AddItemRange 1
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Atlas Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Short Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 35 0 0 0
+	SetItemGoldValue 9600
+	AddItemRange 1
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Ground Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Ground Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 39 0 0 0
+	SetItemGoldValue 10000
+	AddItemRange 1
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Rune Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Rune Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 42 0 0 0
+	SetItemGoldValue 10000
+	AddItemRange 1
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+BeginNewItem "Evil Axe"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Evil Axe"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 50 0 0 0  # Def -5
+	SetItemGoldValue 15000
+	AddItemRange 1
+	AddItemEquipable "GLDT"
+	AddItemEquipable "BRN"
+	AddItemEquipable "RBRN"
+
+EndNewItem
+
+#################### Daggers ###################
+
+BeginNewItem "Short Knife"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Short Knife"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 5 0 0 0
+	SetItemGoldValue 70
+	AddItemRange 1
+	AddItemEquipable "THIF"
+
+EndNewItem
+
+BeginNewItem "Dagger"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Dagger"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 8 0 0 0
+	SetItemGoldValue 320
+	AddItemRange 1
+	AddItemEquipable "THIF"
+
+EndNewItem
+
+BeginNewItem "Knife"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Knife"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 12 0 0 0
+	SetItemGoldValue 500
+	AddItemRange 1
+	AddItemEquipable "THIF"
+
+EndNewItem
+
+BeginNewItem "Thieve's Dagger"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Thieve's Dagger"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 17 0 0 0
+	SetItemGoldValue 940
+	AddItemRange 1
+	AddItemEquipable "THIF"
+
+EndNewItem
+
+#################### Arrows ####################
+
+BeginNewItem "Wooden Arrow"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Wooden Arrow"
+	SetCutsceneGfxFilename "None"
+#	SetItemStats 0 0 7 0 0 0
+	SetItemStats 0 0 4 0 0 0
+	SetItemGoldValue 250
+	AddItemRange 2
+	AddItemEquipable "ACHR"
+	AddItemEquipable "SNIP"
+	AddItemEquipable "BRGN"
+	AddItemEquipable "BWNT"
+	AddItemEquipable "RNGR"
+
+EndNewItem
+
+BeginNewItem "Iron Arrow"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Iron Arrow"
+	SetCutsceneGfxFilename "None"
+#	SetItemStats 0 0 12 0 0 0
+	SetItemStats 0 0 6 0 0 0
+	SetItemGoldValue 600
+	AddItemRange 2
+	# Range3 for demo enemy use, needs dialed back to just 2
+	AddItemRange 3
+	AddItemEquipable "ACHR"
+	AddItemEquipable "SNIP"
+	AddItemEquipable "BRGN"
+	AddItemEquipable "BWNT"
+	AddItemEquipable "RNGR"
+
+EndNewItem
+
+BeginNewItem "Steel Arrow"
+
+	SetItemClass "Weapon"
+	SetItemIcon "Steel Arrow"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 17 0 0 0
+	SetItemGoldValue 600
+	AddItemRange 2
+	AddItemEquipable "ACHR"
+	AddItemEquipable "SNIP"
+	AddItemEquipable "BRGN"
+	AddItemEquipable "BWNT"
+	AddItemEquipable "RNGR"
+
+EndNewItem
+
+
+###############
+# Accessories #
+###############
+
+#################### Rings #####################
+
+
+BeginNewItem "Power Ring"
+
+	SetItemClass "Accessory"
+	SetItemIcon "Power Ring"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 0 0 5 0 0 0
+	SetItemGoldValue 3000
+	AddItemEquipable "ALL"
+
+EndNewItem
+
+
+###############
+# Consumables #
+###############
+
+BeginNewItem "Medical Herb"
+
+	SetItemClass "Tool"
+	SetItemIcon "Medical Herb"
+	SetCutsceneGfxFilename "None"
+	SetItemStats 10 0 0 0 0 0
+	SetItemGoldValue 10
+
+EndNewItem
+
+ResetCommandMode
+
+
+
+
+
+
+
+
+
+
+
+
+

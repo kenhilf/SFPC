@@ -1,0 +1,26 @@
+!SFPC_Script "Game Start" 
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "BOWIE" "Player"
+
+	SetActorClass "SDMN"
+	SetActorMobility "Human"
+#	SetActorStats 1 12 8 0 6 4 4 6
+	SetActorStats 1 99 8 0 6 4 4 6
+	SetActorTileset "sfsdmn.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_bowie.bmp" 5
+	SetActorPosition 60 30
+#	SetActorPosition 52 49
+#	SetActorPosition 59 30
+#	SetActorPosition 47 43
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorSpell "Egress"
+	SetActorItemEquipped "Wooden Sword"
+
+EndNewActor
+
+ResetCommandMode

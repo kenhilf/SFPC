@@ -1,0 +1,14 @@
+!SFPC_Script "Chest 1 - Long Sword"
+
+FlagNeeded "Castle1_Chest1"
+	DialogueWindow "BOWIE looked in the chest.^It was empty."
+End
+
+NoFlag "Castle1_Chest1"
+	SetOverlayTile 27 44 49
+	PlaySound "open-chest.ogg"
+	AddItem "Long Sword" "opened the chest."
+	SetFlag "Castle1_Chest1"
+End
+
+

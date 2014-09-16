@@ -1,0 +1,87 @@
+!SFPC_Script "sfmap startup script"
+
+#PlayMusic "battle.mp3"
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "Villager01" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "townelder.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 14 14
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Villager02" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "towndwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 16 14
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Villager03" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "townman.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 18 14
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Villager04" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "townwoman.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 20 14
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "CHICKEN" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "chicken.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 22 14
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+ResetCommandMode

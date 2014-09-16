@@ -1,0 +1,128 @@
+!SFPC_Script "woods startup script"
+
+PlayMusic "sf2battle.ogg"
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 10 0 0 9 6 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 47 32
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+EndNewActor
+
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 10 0 0 9 6 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 44 41
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+EndNewActor
+
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 10 0 0 9 6 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 49 46
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+EndNewActor
+
+BeginNewActor "BRIGAND LEADER" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Centaur"
+	SetActorStats 1 10 0 0 6 7 7 6
+	SetActorTileset "galamknight.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_galamknight.bmp" 5
+	SetActorPosition 47 29
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Short Spear"
+
+EndNewActor
+
+BeginNewActor "BRIGAND ARCHER" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 8 0 0 3 7 6 5
+	SetActorTileset "enemyarcher.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_enemyarcher.bmp" 5
+	SetActorPosition 48 31
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Iron Arrow"
+
+EndNewActor
+
+BeginNewActor "BRIGAND ARCHER" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 8 0 0 3 7 6 5
+	SetActorTileset "enemyarcher.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_enemyarcher.bmp" 5
+	SetActorPosition 45 39
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Iron Arrow"
+
+EndNewActor
+
+BeginNewActor "BRIGAND ARCHER" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 8 0 0 3 7 6 5
+	SetActorTileset "enemyarcher.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_enemyarcher.bmp" 5
+	SetActorPosition 48 45
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Iron Arrow"
+
+EndNewActor
+
+# Place allies for combat!
+PlaceAlly 54 49
+PlaceAlly 51 49
+PlaceAlly 53 49
+PlaceAlly 52 50
+PlaceAlly 53 50
+
+ResetCommandMode
+
+StartBattle

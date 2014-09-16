@@ -1,0 +1,4 @@
+!SFPC_Script "Actor 001"
+
+DialogueWindow "This is actor script 001 on sfmap!^I have a beard!"
+PlaySound "no-go.ogg"

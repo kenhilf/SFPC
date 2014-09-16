@@ -1,0 +1,6 @@
+!SFPC_Script "NoFlag testing"
+
+NoFlag "showtext"
+	DialogueWindow "Flag showtext is not currently set!"
+End
+

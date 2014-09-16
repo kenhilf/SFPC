@@ -1,0 +1,9 @@
+!SFPC_Script "FlagNeeded testing"
+
+#testing flags
+
+FlagNeeded "showtext"
+	DialogueWindow "The flag test works!"
+End
+
+

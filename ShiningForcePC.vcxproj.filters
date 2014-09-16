@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Timing">
+      <UniqueIdentifier>{956efb82-b90e-4363-88c7-fc04ec62bdde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{aa0f3d5a-46ce-4955-8b03-a3dbcca37005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{a4d96888-9fcc-4357-a0ff-e5a2226325ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{3ab28918-3cf4-4608-8597-09921b3fbf0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{5ab58f40-f7bc-4fe1-bfa6-30a0a926748f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{094480c5-88d0-40a3-bd55-1e555d6f17a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripting">
+      <UniqueIdentifier>{6cbebcb6-1283-4619-883d-29d3a320f28b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{e24a234d-93da-43b0-9653-35bbc8fabdf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Items">
+      <UniqueIdentifier>{79be1b53-9b2b-42dc-ab36-d91fe6fff537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Battle">
+      <UniqueIdentifier>{d3ba0693-8fc4-4de9-a82f-35da4c97b26b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AI">
+      <UniqueIdentifier>{672d4f52-45a0-4a6c-9b4f-8df59ba35d77}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\gametimer.cpp">
+      <Filter>Timing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HighResTimer.cpp">
+      <Filter>Timing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\aniindex.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\animation.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\blugl.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\bmp.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\drawmgr.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\faceset.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\image.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\spellset.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\texture.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tileset.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inputmgr.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\collisioncheck.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filepathmgr.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fpscounter.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\line.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vector2f.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\actionmenu.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\actor.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\actormgr.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\actorparams.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\camera.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fader.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameengine.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gamemodemgr.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameobject.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameobjectmgr.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gamestate.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\intro.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\magic.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menumgr.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\outro.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\slider.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\statblock.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tilemap.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tilemapeditor.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tilemaplayer.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gamefont.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gamestring.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gamewindow.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gamewindowgroup.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\windowmgr.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\commandmgr.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gamecommand.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tokenizer.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\audiomgr.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\item.cpp">
+      <Filter>Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemdb.cpp">
+      <Filter>Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemparams.cpp">
+      <Filter>Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\itemset.cpp">
+      <Filter>Items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\battlecutscene.cpp">
+      <Filter>Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\combatevent.cpp">
+      <Filter>Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\groundbattle.cpp">
+      <Filter>Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\targetingbracket.cpp">
+      <Filter>Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\path.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pathfinder.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\gametimer.h">
+      <Filter>Timing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HighResTimer.h">
+      <Filter>Timing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\aniindex.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\animation.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\blugl.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bmp.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\drawmgr.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\faceset.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\image.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\spellset.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\texture.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tileset.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inputmgr.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\array2d.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\blumath.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\collisioncheck.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filepathmgr.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fpscounter.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\line.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\position.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stlex.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vector2f.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vector2i.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actionmenu.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actor.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actormgr.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actorparams.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\camera.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fader.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameengine.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gamemodemgr.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameobject.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameobjectmgr.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gamestate.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\intro.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\magic.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menumgr.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\outro.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\slider.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\statblock.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tilemap.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tilemapeditor.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tilemaplayer.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gamefont.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gamestring.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gamewindow.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gamewindowgroup.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\windowmgr.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\commandmgr.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gamecommand.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tokenizer.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\audiomgr.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\item.h">
+      <Filter>Items</Filter>
+    </ClInclude>
+    <ClInclude Include="src\itemdb.h">
+      <Filter>Items</Filter>
+    </ClInclude>
+    <ClInclude Include="src\itemparams.h">
+      <Filter>Items</Filter>
+    </ClInclude>
+    <ClInclude Include="src\itemset.h">
+      <Filter>Items</Filter>
+    </ClInclude>
+    <ClInclude Include="src\battlecutscene.h">
+      <Filter>Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\combatevent.h">
+      <Filter>Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\groundbattle.h">
+      <Filter>Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\targetingbracket.h">
+      <Filter>Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\path.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pathfinder.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

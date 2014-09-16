@@ -1,0 +1,4 @@
+!SFPC_Script "To HQ"
+
+PlaySound "through-door.ogg"
+Warp 32 16 "castle" "Right"

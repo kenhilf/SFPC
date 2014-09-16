@@ -1,0 +1,9 @@
+#include "nsISupports.idl"
+#include "adrIOutputStream.idl"
+
+
+[scriptable, uuid(45cdc278-7f83-4276-a9cd-d45833488790)]
+interface adrIAudioDevice : nsISupports {
+  adrIOutputStream createTone(in double frequency);
+  adrIOutputStream openSound(in string filename, in boolean streaming);
+};

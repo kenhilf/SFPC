@@ -1,0 +1,5 @@
+!SFPC_Script "Actor 000"
+
+DialogueWindow "*1One *2Two *3Three *4Four *5Five *6Six *7Seven *8Eight *9Nine *0Zero"
+
+

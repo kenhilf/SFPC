@@ -1,0 +1,197 @@
+!SFPC_Script "camp startup script"
+
+#FlagNeeded "IntroDone"
+	PlayMusic "tension.mp3"
+#End
+
+FlagNeeded "Camp_Chest1"
+	SetOverlayTile 27 57 30
+End
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "Soldier01" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 66 27
+	SetActorFacing "Up"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "Soldier02" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 61 30
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "Soldier03" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 52 35
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "Blacksmith" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "merchant.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 55 32
+	SetActorFacing "Up"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "Soldier04" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 52 27
+	SetActorFacing "Right"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "NPCChester" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "sfcentaur.bmp"
+	SetActorFaceset "face_chester.bmp"
+	SetActorPosition 52 47
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "NPCJaha" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "sfdwarf.bmp"
+	SetActorFaceset "face_jaha.bmp"
+	SetActorPosition 53 42
+	SetActorFacing "Right"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "NPCLuke" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "sfbird.bmp"
+	SetActorFaceset "face_luke.bmp"
+	SetActorPosition 57 40
+	SetActorFacing "Up"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "NPCSlade" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "sfratthief.bmp"
+	SetActorFaceset "face_slade.bmp"
+	SetActorPosition 63 35
+	SetActorFacing "Right"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "NPCMay" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "sfbowcentaur.bmp"
+	SetActorFaceset "face_may.bmp"
+	SetActorPosition 58 32
+	SetActorFacing "Left"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	AddPathStep "Up"
+	AddPathStep "Right"
+	AddPathStep "Down"
+	AddPathStep "Left"
+	AddPathStep "Up"
+	AddPathStep "Right"
+	AddPathStep "Down"
+	AddPathStep "Left"
+	AddPathStep "Up"
+	AddPathStep "Right"
+	AddPathStep "Down"
+	AddPathStep "Left"
+	AddPathStep "Up"
+	AddPathStep "Right"
+	AddPathStep "Down"
+	AddPathStep "Left"
+
+EndNewActor
+
+BeginNewActor "Lumberjack01" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "sailor.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 65 36
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+BeginNewActor "Lumberjack02" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "sailor.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 63 40
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+
+EndNewActor
+
+ResetCommandMode

@@ -1,0 +1,23 @@
+!SFPC_Script "castle startup script"
+
+#PlayMusic "camp.mp3"
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "Villager01" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "townelder.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 14 14
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+ResetCommandMode

@@ -1,0 +1,106 @@
+!SFPC_Script "Game Start" 
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "BOWIE" "Player"
+
+	SetActorClass "SDMN"
+	SetActorMobility "Human"
+	SetActorStats 1 12 8 0 6 4 4 6
+	SetActorTileset "sfsdmn.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_bowie.bmp" 5
+	SetActorPosition 52 49
+#	SetActorPosition 59 30
+#	SetActorPosition 47 43
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorSpell "Egress"
+	SetActorItemEquipped "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "CHESTER" "Player"
+
+	SetActorClass "KNTE"
+	SetActorMobility "Centaur"
+	SetActorStats 1 11 0 0 5 5 7 7
+	SetActorTileset "sfcentaur.bmp"
+	SetActorFaceset "face_chester.bmp"
+	SetActorBattleset "battle_chester.bmp" 5
+	SetActorPosition 0 1
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Bronze Lance"
+	SetActorItemEquipped "Short Spear"
+
+EndNewActor
+
+BeginNewActor "JAHA" "Player"
+
+	SetActorClass "WARR"
+	SetActorMobility "Dwarf"
+#	SetActorStats 1 9 0 0 9 7 4 5
+	SetActorStats 1 9 0 0 7 7 4 5
+	SetActorTileset "sfdwarf.bmp"
+	SetActorFaceset "face_jaha.bmp"
+	SetActorBattleset "battle_jaha.bmp" 5
+	SetActorPosition 0 4
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Short Axe"
+
+EndNewActor
+
+BeginNewActor "LUKE" "Player"
+
+	SetActorClass "BDMN"
+	SetActorMobility "Hovering"
+	SetActorStats 1 12 0 0 5 6 7 6
+	SetActorTileset "sfbird.bmp"
+	SetActorFaceset "face_luke.bmp"
+	SetActorBattleset "battle_luke.bmp" 5
+	SetActorPosition 0 3
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Short Sword"
+
+EndNewActor
+
+BeginNewActor "SLADE" "Player"
+
+	SetActorClass "THIF"
+	SetActorMobility "Human"
+	SetActorStats 1 8 0 0 5 6 6 6
+	SetActorTileset "sfratthief.bmp"
+	SetActorFaceset "face_slade.bmp"
+	SetActorBattleset "battle_slade.bmp" 5
+	SetActorPosition 0 6
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Short Knife"
+
+EndNewActor
+
+BeginNewActor "MAY" "Player"
+
+	SetActorClass "RNGR"
+	SetActorMobility "Centaur"
+	SetActorStats 1 9 0 0 8 4 5 5
+	SetActorTileset "sfbowcentaur.bmp"
+	SetActorFaceset "face_may.bmp"
+	SetActorBattleset "battle_may.bmp" 5
+	SetActorPosition 0 8
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItemEquipped "Wooden Arrow"
+
+EndNewActor
+
+ResetCommandMode

@@ -1,0 +1,4 @@
+!SFPC_Script "Warp - Jail Entrance"
+
+PlaySound "through-door.ogg"
+Warp 61 16 "castle" "Right"

@@ -1,0 +1,158 @@
+!SFPC_Script "battlefield startup script"
+
+PlayMusic "fieldmap2.mp3"
+
+SetCommandMode "ActorSetup"
+
+#using Gizmo stats
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 5 0 0 8 5 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 49 64
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+EndNewActor
+
+#using Gizmo stats
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 5 0 0 8 5 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 53 58
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+EndNewActor
+
+#using Gizmo stats
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 5 0 0 8 5 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 55 58
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+EndNewActor
+
+#using Gizmo stats
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 5 0 0 8 5 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 54 59
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+EndNewActor
+
+#using Gizmo stats
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 5 0 0 8 5 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 50 63
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+
+EndNewActor
+
+
+#using Gizmo stats
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 5 0 0 8 5 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 48 63
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+EndNewActor
+
+#using modified Giant Rat stats (reduced def from 8 to 6)
+BeginNewActor "GALAM KNIGHT" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Centaur"
+	SetActorStats 1 10 0 0 10 6 7 6
+	SetActorTileset "galamknight.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_galamknight.bmp" 5
+	SetActorPosition 54 57
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Short Spear"
+
+EndNewActor
+
+#using modified Giant Rat stats (reduced def from 8 to 6)
+BeginNewActor "GALAM KNIGHT" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Centaur"
+	SetActorStats 1 10 0 0 10 6 7 6
+	SetActorTileset "galamknight.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_galamknight.bmp" 5
+	SetActorPosition 56 57
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Short Spear"
+
+EndNewActor
+
+# Place allies for combat!
+PlaceAlly 47 67
+PlaceAlly 48 67
+PlaceAlly 50 67
+PlaceAlly 51 67
+PlaceAlly 52 67
+PlaceAlly 48 68
+PlaceAlly 49 68
+PlaceAlly 50 68
+PlaceAlly 51 68
+
+ResetCommandMode
+
+StartBattle

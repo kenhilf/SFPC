@@ -1,0 +1,9 @@
+!SFPC_Script "Blacksmith"
+
+FlagNeeded "Camp_Chest1"
+	DialogueWindow "I see you found that short sword I was talking about! Go ahead and keep it, lad. Take care!"
+End
+
+NoFlag "Camp_Chest1"
+	DialogueWindow "What's that you're holding, lad? A wooden practice sword? You'll be in trouble for sure if you go into a fight with just that at your side!^There's an iron short sword in the chest over there, just finished it this morning. Go ahead and take it. And don't forget to equip it!^*4You can equip weapons by pressing X to bring up the menu while not in a battle, then choose Item, then Equip."
+End

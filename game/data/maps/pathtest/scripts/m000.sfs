@@ -1,0 +1,32 @@
+!SFPC_Script "pathtest startup script"
+
+PlayMusic "sf2battle.ogg"
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "DARK DWARF" "Enemy"
+
+	SetActorClass "NONE"
+	SetActorMobility "Dwarf"
+	SetActorStats 1 10 0 0 9 6 5 5
+	SetActorTileset "darkdwarf.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_darkdwarf.bmp" 5
+	SetActorPosition 47 32
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorItem "Battle Axe"
+
+EndNewActor
+
+# Place allies for combat!
+PlaceAlly 54 49
+PlaceAlly 51 49
+PlaceAlly 53 49
+PlaceAlly 52 50
+PlaceAlly 53 50
+
+ResetCommandMode
+
+StartBattle

@@ -1,0 +1,41 @@
+!SFPC_Script "Game Start" 
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "BOWIE" "Player"
+
+	SetActorClass "SDMN"
+	SetActorMobility "Human"
+	SetActorStats 1 12 8 0 6 4 4 6
+	SetActorTileset "sfsdmn.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorBattleset "battle_bowie.bmp" 5
+#	SetActorPosition 86 90
+	SetActorPosition 52 48
+#	SetActorPosition 10 10
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	SetActorSpell "Egress"
+	SetActorItemEquipped "Wooden Sword"
+
+EndNewActor
+
+#BeginNewActor "CHESTER" "Player"
+
+#	SetActorClass "KNTE"
+#	SetActorMobility "Centaur"
+#	SetActorStats 1 11 0 0 5 5 7 7
+#	SetActorTileset "sfcentaur.bmp"
+#	SetActorFaceset "face_chester.bmp"
+#	SetActorBattleset "battle_chester.bmp" 5
+#	SetActorPosition 50 40
+#	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+#	SetActorItem "Bronze Lance"
+#	SetActorItemEquipped "Short Spear"
+
+#EndNewActor
+
+ResetCommandMode

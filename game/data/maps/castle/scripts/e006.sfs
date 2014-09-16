@@ -1,0 +1,4 @@
+!SFPC_Script "Plot Bookshelf"
+
+DialogueWindow "BOWIE investigated the book shelves.^A book...$THE TALES OF MAX, HERO OF LIGHT"
+

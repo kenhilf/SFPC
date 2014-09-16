@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3461CFCC-C9A6-4D22-B54A-E3301DC7FD24}</ProjectGuid>
+    <RootNamespace>ShiningForcePC</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="SharedSettings.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="SharedSettings.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\gametimer.cpp" />
+    <ClCompile Include="src\HighResTimer.cpp" />
+    <ClCompile Include="src\aniindex.cpp" />
+    <ClCompile Include="src\animation.cpp" />
+    <ClCompile Include="src\blugl.cpp" />
+    <ClCompile Include="src\bmp.cpp" />
+    <ClCompile Include="src\drawmgr.cpp" />
+    <ClCompile Include="src\faceset.cpp" />
+    <ClCompile Include="src\image.cpp" />
+    <ClCompile Include="src\spellset.cpp" />
+    <ClCompile Include="src\texture.cpp" />
+    <ClCompile Include="src\tileset.cpp" />
+    <ClCompile Include="src\inputmgr.cpp" />
+    <ClCompile Include="src\collisioncheck.cpp" />
+    <ClCompile Include="src\core.cpp" />
+    <ClCompile Include="src\filepathmgr.cpp" />
+    <ClCompile Include="src\fpscounter.cpp" />
+    <ClCompile Include="src\line.cpp" />
+    <ClCompile Include="src\vector2f.cpp" />
+    <ClCompile Include="src\actionmenu.cpp" />
+    <ClCompile Include="src\actor.cpp" />
+    <ClCompile Include="src\actormgr.cpp" />
+    <ClCompile Include="src\actorparams.cpp" />
+    <ClCompile Include="src\camera.cpp" />
+    <ClCompile Include="src\fader.cpp" />
+    <ClCompile Include="src\gameengine.cpp" />
+    <ClCompile Include="src\gamemodemgr.cpp" />
+    <ClCompile Include="src\gameobject.cpp" />
+    <ClCompile Include="src\gameobjectmgr.cpp" />
+    <ClCompile Include="src\gamestate.cpp" />
+    <ClCompile Include="src\intro.cpp" />
+    <ClCompile Include="src\magic.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\menumgr.cpp" />
+    <ClCompile Include="src\outro.cpp" />
+    <ClCompile Include="src\slider.cpp" />
+    <ClCompile Include="src\statblock.cpp" />
+    <ClCompile Include="src\tilemap.cpp" />
+    <ClCompile Include="src\tilemapeditor.cpp" />
+    <ClCompile Include="src\tilemaplayer.cpp" />
+    <ClCompile Include="src\gamefont.cpp" />
+    <ClCompile Include="src\gamestring.cpp" />
+    <ClCompile Include="src\gamewindow.cpp" />
+    <ClCompile Include="src\gamewindowgroup.cpp" />
+    <ClCompile Include="src\windowmgr.cpp" />
+    <ClCompile Include="src\commandmgr.cpp" />
+    <ClCompile Include="src\gamecommand.cpp" />
+    <ClCompile Include="src\tokenizer.cpp" />
+    <ClCompile Include="src\audiomgr.cpp" />
+    <ClCompile Include="src\item.cpp" />
+    <ClCompile Include="src\itemdb.cpp" />
+    <ClCompile Include="src\itemparams.cpp" />
+    <ClCompile Include="src\itemset.cpp" />
+    <ClCompile Include="src\battlecutscene.cpp" />
+    <ClCompile Include="src\combatevent.cpp" />
+    <ClCompile Include="src\groundbattle.cpp" />
+    <ClCompile Include="src\targetingbracket.cpp" />
+    <ClCompile Include="src\path.cpp" />
+    <ClCompile Include="src\pathfinder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\gametimer.h" />
+    <ClInclude Include="src\HighResTimer.h" />
+    <ClInclude Include="src\aniindex.h" />
+    <ClInclude Include="src\animation.h" />
+    <ClInclude Include="src\blugl.h" />
+    <ClInclude Include="src\bmp.h" />
+    <ClInclude Include="src\drawmgr.h" />
+    <ClInclude Include="src\faceset.h" />
+    <ClInclude Include="src\image.h" />
+    <ClInclude Include="src\spellset.h" />
+    <ClInclude Include="src\texture.h" />
+    <ClInclude Include="src\tileset.h" />
+    <ClInclude Include="src\inputmgr.h" />
+    <ClInclude Include="src\array2d.h" />
+    <ClInclude Include="src\blumath.h" />
+    <ClInclude Include="src\collisioncheck.h" />
+    <ClInclude Include="src\core.h" />
+    <ClInclude Include="src\filepathmgr.h" />
+    <ClInclude Include="src\fpscounter.h" />
+    <ClInclude Include="src\line.h" />
+    <ClInclude Include="src\position.h" />
+    <ClInclude Include="src\stlex.h" />
+    <ClInclude Include="src\vector2f.h" />
+    <ClInclude Include="src\vector2i.h" />
+    <ClInclude Include="src\actionmenu.h" />
+    <ClInclude Include="src\actor.h" />
+    <ClInclude Include="src\actormgr.h" />
+    <ClInclude Include="src\actorparams.h" />
+    <ClInclude Include="src\camera.h" />
+    <ClInclude Include="src\fader.h" />
+    <ClInclude Include="src\gameengine.h" />
+    <ClInclude Include="src\gamemodemgr.h" />
+    <ClInclude Include="src\gameobject.h" />
+    <ClInclude Include="src\gameobjectmgr.h" />
+    <ClInclude Include="src\gamestate.h" />
+    <ClInclude Include="src\intro.h" />
+    <ClInclude Include="src\magic.h" />
+    <ClInclude Include="src\menumgr.h" />
+    <ClInclude Include="src\outro.h" />
+    <ClInclude Include="src\slider.h" />
+    <ClInclude Include="src\statblock.h" />
+    <ClInclude Include="src\tilemap.h" />
+    <ClInclude Include="src\tilemapeditor.h" />
+    <ClInclude Include="src\tilemaplayer.h" />
+    <ClInclude Include="src\gamefont.h" />
+    <ClInclude Include="src\gamestring.h" />
+    <ClInclude Include="src\gamewindow.h" />
+    <ClInclude Include="src\gamewindowgroup.h" />
+    <ClInclude Include="src\windowmgr.h" />
+    <ClInclude Include="src\commandmgr.h" />
+    <ClInclude Include="src\gamecommand.h" />
+    <ClInclude Include="src\tokenizer.h" />
+    <ClInclude Include="src\audiomgr.h" />
+    <ClInclude Include="src\item.h" />
+    <ClInclude Include="src\itemdb.h" />
+    <ClInclude Include="src\itemparams.h" />
+    <ClInclude Include="src\itemset.h" />
+    <ClInclude Include="src\battlecutscene.h" />
+    <ClInclude Include="src\combatevent.h" />
+    <ClInclude Include="src\groundbattle.h" />
+    <ClInclude Include="src\targetingbracket.h" />
+    <ClInclude Include="src\path.h" />
+    <ClInclude Include="src\pathfinder.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

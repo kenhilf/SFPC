@@ -1,0 +1,6 @@
+!SFPC_Script "CheckDirection Test"
+
+CheckDirection "Up"
+	DialogueWindow "This is Chester's house."
+End
+

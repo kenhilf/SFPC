@@ -1,0 +1,28 @@
+XPCOM Bindings for Audiere
+
+
+Installation Instructions
+----
+
+Copy mozAudiere.dll, audiere.dll, and adrI*.xpt into the Mozilla
+'bin/components' directory.  Restart Mozilla.
+
+
+Usage Instructions
+----
+
+Look in the IDL files for the full API.
+
+Short JavaScript example:
+
+var service = Components.classes["@aegisknight.org/audiere;1"].getService(Components.interfaces.adrIAudiereService);
+var device = service.openDevice("", "");
+
+var stream = device.openSound("song.ogg", true);
+stream.playing = true;
+
+var sound = device.openSound("sound.wav", false);
+sound.playing = true;
+
+var tone = device.createTone(256);
+tone.playing = true;

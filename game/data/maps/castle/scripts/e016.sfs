@@ -1,0 +1,4 @@
+!SFPC_Script "Warp - 2f to 1f"
+
+PlaySound "through-door.ogg"
+Warp 59 44 "castle" "Left"

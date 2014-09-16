@@ -1,0 +1,16 @@
+#include "nsISupports.idl"
+
+
+[scriptable, uuid(15865360-c5ca-40ea-a9e3-76f39c8228b4)]
+interface adrIOutputStream : nsISupports {
+  attribute boolean playing;
+  void reset();
+
+  attribute boolean repeating;
+  attribute float volume;
+  attribute float pan;
+
+  readonly attribute boolean seekable;
+  readonly attribute long length;
+  attribute long position;
+};

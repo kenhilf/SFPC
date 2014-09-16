@@ -1,0 +1,200 @@
+!SFPC_Script "village startup script"
+
+PlayMusic "camp.mp3"
+
+SetCommandMode "ActorSetup"
+
+BeginNewActor "Merchant1" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "merchant.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 48 60
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Merchant2" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "merchant.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 41 47
+	SetActorFacing "Up"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Soldier" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "soldier.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 41 46
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Priest" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "priest.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 41 60
+	SetActorFacing "Left"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Girl" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "girl.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 41 54
+	SetActorFacing "Up"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Duck" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "duck.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 41 53
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Innkeeper" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "fatman.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 53 46
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Elder" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "townelder.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 49 55
+	SetActorFacing "Down"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "ShackMan" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "townman.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 65 53
+	SetActorFacing "Right"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Woman" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "townwoman.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 54 60
+	SetActorFacing "Up"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Cat" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "cat.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 58 59
+	SetActorFacing "Left"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+BeginNewActor "Fisherman" "NPC"
+
+	SetActorClass "NONE"
+	SetActorMobility "Human"
+	SetActorStats 1 1 0 0 1 1 1 5
+	SetActorTileset "sailor.bmp"
+	SetActorFaceset "face_bowie.bmp"
+	SetActorPosition 69 45
+	SetActorFacing "Up"
+
+	# Optional Fields, SetActorSpell and SetActorItem Only!
+	#SetActorSpell "Egress"
+	#SetActorItem "Wooden Sword"
+
+EndNewActor
+
+
+ResetCommandMode
