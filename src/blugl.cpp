@@ -147,14 +147,13 @@ GLvoid bluGL::KillGLWindow(GLvoid)
 
 }
 
-bool bluGL::CreateGLWindow(char* title, const int width, const int height, const int bits,
-						   const bool fullscreenflag)
+bool bluGL::CreateGLWindow(char* title, const int width, const int height, const int bits, const bool bFullScreen)
 {
 	m_pWinTitle = title;
 	m_bpp = bits;
-	m_bFullscreen = fullscreenflag;
+	m_bFullscreen = bFullScreen;
 
-	InitWindowSize(width, height); // Inits m_winWidth and m_winHeight
+	InitWindowSize(width, height, m_bFullscreen); // Inits m_winWidth and m_winHeight
 
 	return CreateGLWindow();
 }
@@ -170,13 +169,6 @@ bool bluGL::CreateGLWindow()
 	// extended and normal window style variables
 	DWORD		dwExStyle;
 	DWORD		dwStyle;
-
-	// set up window rectangle
-	RECT WindowRect;
-	WindowRect.left = 0;
-	WindowRect.right = static_cast<long>(m_winWidth);
-	WindowRect.top = 0;
-	WindowRect.bottom = static_cast<long>(m_winHeight);
 
 	// grab an instance of the window and declare the window class
 	m_hInstance = GetModuleHandle(NULL);
@@ -249,7 +241,20 @@ bool bluGL::CreateGLWindow()
 
 	// AdjustWindowRect expands the window so that the body of the window is the size we requested
 	// instead of having the edges get overlapped by the borders.  If we're fullscreen it does nothing.
-	AdjustWindowRectEx(&WindowRect, dwStyle, false, dwExStyle);
+	RECT windowRect = { 0, 0, m_winWidth, m_winHeight };
+	AdjustWindowRectEx(&windowRect, dwStyle, false, dwExStyle);
+
+	int winX = CW_USEDEFAULT;
+	int winY = CW_USEDEFAULT;
+	int winWidth = windowRect.right - windowRect.left;
+	int winHeight = windowRect.bottom - windowRect.top;
+
+	bool bCenterWindow = !m_bFullscreen;
+	if (bCenterWindow)
+	{
+		winX = (::GetSystemMetrics(SM_CXSCREEN) - winWidth) / 2;
+		winY = (::GetSystemMetrics(SM_CYSCREEN) - winHeight) / 2;
+	}
 
 	// finally we attempt to create the window we have configured
 	if (!(m_hWnd = CreateWindowEx(	dwExStyle,							// Extended Window Style
@@ -257,9 +262,9 @@ bool bluGL::CreateGLWindow()
 									m_pWinTitle,						// Window title
 									WS_CLIPSIBLINGS | WS_CLIPCHILDREN |	// required window styles for OpenGL
 									dwStyle,							// OR'ed on top of our existing dwStyle
-									8, 8,								// place the window at 8, 8 on the screen
-									WindowRect.right - WindowRect.left,	// calculate adjusted window width
-									WindowRect.bottom - WindowRect.top,	// calculate adjusted window height
+									winX, winY,							// place the window at 8, 8 on the screen
+									winWidth,							// calculate adjusted window width
+									winHeight,							// calculate adjusted window height
 									NULL,								// no parent window
 									NULL,								// no menu
 									m_hInstance,						// instance
@@ -398,11 +403,16 @@ namespace WindowSizeMethod
 	};
 }
 
-void bluGL::InitWindowSize(int width, int height)
+void bluGL::InitWindowSize(int width, int height, bool fullScreen)
 {
-	//const WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::Input;
-	const WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::LargestGameScreenMultiple;
-	//const WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::FillScreen;
+	//WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::Input;
+	WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::LargestGameScreenMultiple;
+	//WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::FillScreen;
+
+	if (fullScreen)
+	{
+		windowSizeMethod = WindowSizeMethod::Input;
+	}
 
 	if (windowSizeMethod == WindowSizeMethod::Input)
 	{
