@@ -164,13 +164,10 @@ void DrawMgr::EndFrame()
 	bluGL::Instance().PostDrawGLScene();
 }
 
-
-//@TODO: glScissor code does not play nice with maximized windows, maximize button
-// currently disabled in bluGL::CreateGLWindow()
 void DrawMgr::BeginScissor(const int x, const int y, const int w, const int h)
 {
-	static float hratio = static_cast<float>(ACTUAL_SCREEN_WIDTH)  / GAME_SCREEN_WIDTH;
-	static float vratio = static_cast<float>(ACTUAL_SCREEN_HEIGHT) / GAME_SCREEN_HEIGHT;
+	float hratio = static_cast<float>(bluGL::Instance().GetWindowWidth()) / GAME_SCREEN_WIDTH;
+	float vratio = static_cast<float>(bluGL::Instance().GetWindowHeight()) / GAME_SCREEN_HEIGHT;
 
 	glEnable(GL_SCISSOR_TEST);
 

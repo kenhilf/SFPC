@@ -29,8 +29,13 @@ GameEngine::GameEngine() :
 
 void GameEngine::Initialize()
 {
+	//@TODO: determine optimal window size based on current screen's resolution
+	const int windowScale = 4;
+	const int windowWidth = GAME_SCREEN_WIDTH * windowScale;
+	const int windowHeight = GAME_SCREEN_HEIGHT * windowScale;
+
 	// Create the OpenGL Window.  Actual window size defined in core.h
-	bluGL::Instance().CreateGLWindow("Shining Force PC", ACTUAL_SCREEN_WIDTH, ACTUAL_SCREEN_HEIGHT, 32, false);
+	bluGL::Instance().CreateGLWindow("Shining Force PC", windowWidth, windowHeight, 32, false);
 
 	// Register all keys to be used
 	InputMgr::Instance().RegisterKey(VK_ESCAPE);

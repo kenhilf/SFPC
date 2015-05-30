@@ -8,10 +8,11 @@ bluGL::bluGL() :
 	m_bFullscreen(false),
 	m_bInitialized(false),
 	m_pWinTitle("bludragn's OpenGL Framework"),
-	m_winWidth(ACTUAL_SCREEN_WIDTH),
-	m_winHeight(ACTUAL_SCREEN_HEIGHT),
+	m_winWidth(640),
+	m_winHeight(480),
 	m_bpp(32)
 {
+	//@TODO: This shouldn't be here - nothing to do with OpenGL
 	srand((unsigned int)time(0));
 }
 
@@ -27,6 +28,9 @@ GLvoid bluGL::ReSizeGLScene(GLsizei width, GLsizei height)
 		height = 1;
 	}
 
+	m_winWidth = width;
+	m_winHeight = height;
+
 	// Reset the current viewport
 	glViewport(0, 0, width, height);
 
@@ -34,10 +38,8 @@ GLvoid bluGL::ReSizeGLScene(GLsizei width, GLsizei height)
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 
-	// set up 2D orthographic projection with 0, 0 as the top left corner of the screen
-	const GLdouble GameScreenWidth = GAME_SCREEN_WIDTH; 
-	const GLdouble GameScreenHeight = GAME_SCREEN_HEIGHT;
-	gluOrtho2D(0, GameScreenWidth, GameScreenHeight, 0);
+	// Set up 2D orthographic projection with 0, 0 as the top left corner of the screen
+	gluOrtho2D(0, static_cast<GLdouble>(GAME_SCREEN_WIDTH), static_cast<GLdouble>(GAME_SCREEN_HEIGHT), 0);
 	
 	// Select and reset the modelview matrix
 	glMatrixMode(GL_MODELVIEW);
@@ -242,11 +244,7 @@ bool bluGL::CreateGLWindow()
 	else
 	{
 		dwExStyle = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;
-		//@TODO: the '& ~WS_MAXIMIZEBOX' disables maximizing the window as the textwindow
-		// glScissor code does not play nice with maximized windows currently, remove this param
-		// once this is fixed
-//		dwStyle = WS_OVERLAPPEDWINDOW & ~WS_MAXIMIZEBOX;
-		dwStyle = (WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX);
+		dwStyle = (WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_THICKFRAME);
 	}
 
 	// AdjustWindowRect expands the window so that the body of the window is the size we requested

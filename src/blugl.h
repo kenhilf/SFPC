@@ -28,6 +28,9 @@ public:
 	bool ToggleFullscreen();
 	void SetVSyncEnabled(const bool bEnabled);
 
+	int GetWindowWidth() const { return m_winWidth; }
+	int GetWindowHeight() const { return m_winHeight; }
+
 private:
 	// hiding constructor for singleton pattern
 	bluGL();

@@ -5,8 +5,6 @@
 
 const int GAME_SCREEN_WIDTH = 320;
 const int GAME_SCREEN_HEIGHT = 240;
-const int ACTUAL_SCREEN_WIDTH = 1280;
-const int ACTUAL_SCREEN_HEIGHT = 960;
 const int TILE_WIDTH = 24;
 const int TILE_HEIGHT = 24;
 const int GAME_SCREEN_WIDTH_IN_TILES = 14;
