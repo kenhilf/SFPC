@@ -151,10 +151,10 @@ bool bluGL::CreateGLWindow(char* title, const int width, const int height, const
 						   const bool fullscreenflag)
 {
 	m_pWinTitle = title;
-	m_winWidth = width;
-	m_winHeight = height;
 	m_bpp = bits;
 	m_bFullscreen = fullscreenflag;
+
+	InitWindowSize(width, height); // Inits m_winWidth and m_winHeight
 
 	return CreateGLWindow();
 }
@@ -384,6 +384,65 @@ void bluGL::SetVSyncEnabled(const bool bEnabled)
 		if (wglSwapIntervalEXT)
 		{
 			wglSwapIntervalEXT(bEnabled? 1 : 0);
+		}
+	}
+}
+
+namespace WindowSizeMethod
+{
+	enum Type
+	{
+		Input,						// Use input width, height values
+		LargestGameScreenMultiple,	// Largest possible window that is a multiple of game screen dimensions (pixel-perfect)
+		FillScreen					// Largest possible window, maintains aspect ratio (not pixel-perfect)
+	};
+}
+
+void bluGL::InitWindowSize(int width, int height)
+{
+	//const WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::Input;
+	const WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::LargestGameScreenMultiple;
+	//const WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::FillScreen;
+
+	if (windowSizeMethod == WindowSizeMethod::Input)
+	{
+		m_winWidth = width;
+		m_winHeight = height;
+	}
+	else if (windowSizeMethod == WindowSizeMethod::LargestGameScreenMultiple)
+	{
+		const float screenWidth = (float)::GetSystemMetrics(SM_CXSCREEN);
+		const float screenHeight = (float)::GetSystemMetrics(SM_CYSCREEN);
+
+		int scale = 1;
+		if (screenWidth >= screenHeight)
+		{
+			scale = static_cast<int>(screenHeight / GAME_SCREEN_HEIGHT);
+		}
+		else
+		{
+			scale = static_cast<int>(screenWidth / GAME_SCREEN_WIDTH);
+		}
+
+		m_winWidth = width * scale;
+		m_winHeight = height * scale;
+	}
+	else if (windowSizeMethod == WindowSizeMethod::FillScreen)
+	{
+		const int screenWidth = ::GetSystemMetrics(SM_CXSCREEN);
+		const int screenHeight = ::GetSystemMetrics(SM_CYSCREEN);
+
+		const int cushion = 60; // Take window borders and taskbar into account
+
+		if (screenWidth >= screenHeight)
+		{
+			m_winHeight = screenHeight - cushion;
+			m_winWidth = static_cast<int>(m_winHeight * (static_cast<float>(width) / height));
+		}
+		else
+		{
+			m_winWidth = screenWidth - cushion;
+			m_winHeight = static_cast<int>(m_winWidth * (static_cast<float>(height) / width));
 		}
 	}
 }

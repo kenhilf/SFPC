@@ -39,6 +39,8 @@ private:
 	bluGL(const bluGL& rhs);
 	bluGL& operator=(const bluGL& rhs);
 
+	void InitWindowSize(int width, int height);
+
 	HGLRC m_hRC;				// handle to Rendering Context
 	HDC	m_hDC;					// handle to Device Context
 	HWND m_hWnd;				// handle to the window
