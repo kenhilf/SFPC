@@ -1,5 +1,117 @@
 #include "blugl.h"
 
+namespace
+{
+	namespace WindowSizeMethod
+	{
+		enum Type
+		{
+			Input,						// Use input width, height values
+			LargestGameScreenMultiple,	// Largest possible window that is a multiple of game screen dimensions (pixel-perfect)
+			FillScreen					// Largest possible window, maintains aspect ratio (not pixel-perfect)
+		};
+	}
+
+	//WindowSizeMethod::Type WINDOW_SIZE_METHOD = WindowSizeMethod::Input;
+	WindowSizeMethod::Type WINDOW_SIZE_METHOD = WindowSizeMethod::LargestGameScreenMultiple;
+	//WindowSizeMethod::Type WINDOW_SIZE_METHOD = WindowSizeMethod::FillScreen;
+
+	const DWORD FULLSCREEN_STYLE = WS_POPUP;
+	const DWORD FULLSCREEN_EX_STYLE = WS_EX_APPWINDOW;
+	const DWORD WINDOWED_STYLE = WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_THICKFRAME;
+	const DWORD WINDOWED_EX_STYLE = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;
+
+	//@TODO: Move to Vector2.h and consider re-implementing Vector2f as a typedef of Vector2<float>
+	template <typename T>
+	class Vector2
+	{
+	public:
+		const 
+
+		Vector2() {}
+		Vector2(T x, T y) : x(x), y(y) {}
+
+		Vector2 operator-(const Vector2& rhs) { return Vector2(x - rhs.x, y - rhs.y); }
+
+		T x, y;
+	};
+
+	typedef Vector2<int> Vector2i;
+
+	// Don't call this in FullScreen mode
+	Vector2i GetWindowBorderSize()
+	{
+		RECT borders = { 0, 0, 0, 0 };
+		const BOOL bMenu = FALSE;
+		AdjustWindowRectEx(&borders, WINDOWED_STYLE, bMenu, WINDOWED_EX_STYLE);
+		return Vector2i(borders.right - borders.left, borders.bottom - borders.top);
+	}
+
+	// Returns size of primary screen less the space taken by the task bar
+	Vector2i GetScreenWorkAreaSize()
+	{
+		RECT workArea;
+		SystemParametersInfo(SPI_GETWORKAREA, 0, &workArea, 0);
+		return Vector2i(workArea.right - workArea.left, workArea.bottom - workArea.top);
+	}
+
+	Vector2i GetUsableScreenSize(bool bFullScreen)
+	{
+		if (bFullScreen)
+			return GetScreenWorkAreaSize();
+		else
+			return GetScreenWorkAreaSize() - GetWindowBorderSize();
+	}
+
+	void AdjustWindowSize(int& width, int& height, bool bFullScreen)
+	{
+		const int inWidth = width;
+		const int inHeight = height;
+
+		if (bFullScreen)
+		{
+			return;
+		}
+
+		if (WINDOW_SIZE_METHOD == WindowSizeMethod::Input)
+		{
+			// Nothing to do, keep input values
+		}
+		else if (WINDOW_SIZE_METHOD == WindowSizeMethod::LargestGameScreenMultiple)
+		{
+			Vector2i screenSize = GetUsableScreenSize(bFullScreen);
+
+			int scale = 1;
+			if (screenSize.x >= screenSize.y)
+			{
+				scale = static_cast<int>(screenSize.y / GAME_SCREEN_HEIGHT);
+			}
+			else
+			{
+				scale = static_cast<int>(screenSize.x / GAME_SCREEN_WIDTH);
+			}
+
+			width = inWidth * scale;
+			height = inHeight * scale;
+		}
+		else if (WINDOW_SIZE_METHOD == WindowSizeMethod::FillScreen)
+		{
+			Vector2i screenSize = GetUsableScreenSize(bFullScreen);
+
+			if (screenSize.x >= screenSize.y)
+			{
+				height = screenSize.y;
+				width = static_cast<int>(height * (static_cast<float>(inWidth) / inHeight));
+			}
+			else
+			{
+				width = screenSize.x;
+				height = static_cast<int>(width * (static_cast<float>(inHeight) / inWidth));
+			}
+		}
+	}
+} // anonymous namespace
+
 bluGL::bluGL() :
 	m_hRC(NULL),
 	m_hDC(NULL),
@@ -152,8 +264,8 @@ bool bluGL::CreateGLWindow(char* title, const int width, const int height, const
 	m_pWinTitle = title;
 	m_bpp = bits;
 	m_bFullscreen = bFullScreen;
-
-	InitWindowSize(width, height, m_bFullscreen); // Inits m_winWidth and m_winHeight
+	m_winWidth = width;
+	m_winHeight = height;
 
 	return CreateGLWindow();
 }
@@ -224,20 +336,19 @@ bool bluGL::CreateGLWindow()
 	// check again for fullscreen as the code above may have failed and the user may have switched to windowed mode
 	if (m_bFullscreen)
 	{
-		// Set extended style to WS_EX_APPWINDOW, window style WS_POPUP gives us no borders, 
-		// and disable the mouse pointer
-		dwExStyle = WS_EX_APPWINDOW;
-		dwStyle = WS_POPUP;
+		dwExStyle = FULLSCREEN_EX_STYLE;
+		dwStyle = FULLSCREEN_STYLE;
+
 		ShowCursor(false);
 	}
-
-	// we're in windowed mode.  WS_EX_WINDOWEDGE gives the window a 3d look.
-	// WS_OVERLAPPEDWINDOW adds a title bar, sizing border, window menu, and min/max buttons.
 	else
 	{
-		dwExStyle = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;
-		dwStyle = (WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_THICKFRAME);
+		dwExStyle = WINDOWED_EX_STYLE;
+		dwStyle = WINDOWED_STYLE;
 	}
+
+	// Modifies m_winWidth and m_winHeight to best fit the screen
+	AdjustWindowSize(m_winWidth, m_winHeight, m_bFullscreen);
 
 	// AdjustWindowRect expands the window so that the body of the window is the size we requested
 	// instead of having the edges get overlapped by the borders.  If we're fullscreen it does nothing.
@@ -252,8 +363,9 @@ bool bluGL::CreateGLWindow()
 	bool bCenterWindow = !m_bFullscreen;
 	if (bCenterWindow)
 	{
-		winX = (::GetSystemMetrics(SM_CXSCREEN) - winWidth) / 2;
-		winY = (::GetSystemMetrics(SM_CYSCREEN) - winHeight) / 2;
+		const Vector2i screenSize = GetScreenWorkAreaSize();
+		winX = (screenSize.x - winWidth) / 2;
+		winY = (screenSize.y - winHeight) / 2;
 	}
 
 	// finally we attempt to create the window we have configured
@@ -389,70 +501,6 @@ void bluGL::SetVSyncEnabled(const bool bEnabled)
 		if (wglSwapIntervalEXT)
 		{
 			wglSwapIntervalEXT(bEnabled? 1 : 0);
-		}
-	}
-}
-
-namespace WindowSizeMethod
-{
-	enum Type
-	{
-		Input,						// Use input width, height values
-		LargestGameScreenMultiple,	// Largest possible window that is a multiple of game screen dimensions (pixel-perfect)
-		FillScreen					// Largest possible window, maintains aspect ratio (not pixel-perfect)
-	};
-}
-
-void bluGL::InitWindowSize(int width, int height, bool fullScreen)
-{
-	//WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::Input;
-	WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::LargestGameScreenMultiple;
-	//WindowSizeMethod::Type windowSizeMethod = WindowSizeMethod::FillScreen;
-
-	if (fullScreen)
-	{
-		windowSizeMethod = WindowSizeMethod::Input;
-	}
-
-	if (windowSizeMethod == WindowSizeMethod::Input)
-	{
-		m_winWidth = width;
-		m_winHeight = height;
-	}
-	else if (windowSizeMethod == WindowSizeMethod::LargestGameScreenMultiple)
-	{
-		const float screenWidth = (float)::GetSystemMetrics(SM_CXSCREEN);
-		const float screenHeight = (float)::GetSystemMetrics(SM_CYSCREEN);
-
-		int scale = 1;
-		if (screenWidth >= screenHeight)
-		{
-			scale = static_cast<int>(screenHeight / GAME_SCREEN_HEIGHT);
-		}
-		else
-		{
-			scale = static_cast<int>(screenWidth / GAME_SCREEN_WIDTH);
-		}
-
-		m_winWidth = width * scale;
-		m_winHeight = height * scale;
-	}
-	else if (windowSizeMethod == WindowSizeMethod::FillScreen)
-	{
-		const int screenWidth = ::GetSystemMetrics(SM_CXSCREEN);
-		const int screenHeight = ::GetSystemMetrics(SM_CYSCREEN);
-
-		const int cushion = 60; // Take window borders and taskbar into account
-
-		if (screenWidth >= screenHeight)
-		{
-			m_winHeight = screenHeight - cushion;
-			m_winWidth = static_cast<int>(m_winHeight * (static_cast<float>(width) / height));
-		}
-		else
-		{
-			m_winWidth = screenWidth - cushion;
-			m_winHeight = static_cast<int>(m_winWidth * (static_cast<float>(height) / width));
 		}
 	}
 }
